@@ -1,0 +1,169 @@
+/******  GLOBAL STYLES  ********/
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --MediumGreyAlpha: hsla(216, 12%, 54%, 0.1);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    max-width: 1440px;
+    max-height: 800px;
+    height: 100vh;
+    background-color: var(--VeryDarkBlue);
+    color: var(--White);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    row-gap: 20px;
+}
+
+
+/*******  CARD CONTAINER  ********/
+#card-container {
+    background-color: var(--DarkBlue);
+    width: 20vw;
+    height: 43vh;
+    padding: 1em;
+    border-radius: 25px;
+}
+
+.star {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 1.5em;
+    border-radius: 50%;
+    background-color: var(--MediumGreyAlpha);
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star img {
+    width: 15px;
+    height: 15px;
+}
+
+.feedback {
+    color: var(--MediumGrey);
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    margin-bottom: 2em;
+    margin-top: -1em;
+}
+
+
+/****** RATING CONTAINER ******/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-btn {
+    display: flex;
+    justify-content: space-between;
+    color: var(--MediumGrey);
+    margin-bottom: 2em;
+    line-height: 25px;
+    text-align: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 0.5em;
+    background-color: var(--MediumGreyAlpha);
+}
+
+input[type="radio"]:checked + label {
+    background-color: var(--LightGrey);
+    color: var(--White);
+}
+
+label:hover {
+    background-color: var(--Orange);
+    color: var(--White);
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: var(--Orange);
+    color: var(--White);
+    padding: 1em;
+    border-radius: 25px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+    cursor: pointer;
+}
+
+
+
+/*******   RATING SUBMIT  ********/
+.rating-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image {
+    width: 50%;
+    margin-bottom: 0.5em;
+}
+
+.my-rating {
+    background-color: var(--MediumGreyAlpha);
+    border-radius: 25px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--Orange);
+    padding: 0.5em 1em;
+}
+
+.thanks {
+    letter-spacing: 1px;
+    margin-bottom: -0.2em;
+}
+
+.thanks-text {
+    color: var(--LightGrey);
+    font-size: 0.9rem;
+    line-height: 1.5em;
+}
+
+
+
+/******* SPECIAL CLASSES  ********/
+.hide-list {
+    visibility: hidden;
+}
+
+
+/*******   MEDIA QUERIES  *******/
+@media only screen and (max-width: 375px) {
+    body {
+        max-width: 375px;
+        max-height: 667px;
+    }
+}
