@@ -16,7 +16,7 @@ body {
     font-size: 15px;
     font-family: 'Overpass', sans-serif;
     max-width: 1440px;
-    max-height: 800px;
+    width: 100%;
     height: 100vh;
     background-color: var(--VeryDarkBlue);
     color: var(--White);
@@ -55,7 +55,7 @@ body {
 
 .feedback {
     color: var(--MediumGrey);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.5em;
     margin-bottom: 2em;
     margin-top: -1em;
@@ -101,17 +101,19 @@ label:hover {
     cursor: pointer;
 }
 
-input[type="submit"] {
+button {
     background-color: var(--Orange);
     color: var(--White);
     padding: 1em;
     border-radius: 25px;
     border: none;
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 2px;
+    width: 100%;
 }
 
-input[type="submit"]:hover {
+button:hover {
     background-color: var(--White);
     color: var(--Orange);
     cursor: pointer;
@@ -156,14 +158,50 @@ input[type="submit"]:hover {
 
 /******* SPECIAL CLASSES  ********/
 .hide-list {
-    visibility: hidden;
+    display: none;
 }
 
 
 /*******   MEDIA QUERIES  *******/
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 1430px) and (min-width: 776px) {
     body {
-        max-width: 375px;
-        max-height: 667px;
+       width: 100%;
+       justify-items: center;
+    }
+
+    #card-container {
+        width: 40%;
+    }
+}
+
+
+@media only screen and (max-width: 775px) and (min-width: 641px) {
+    body {
+       width: 100%;
+       justify-items: center;
+    }
+
+    #card-container {
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 640px) and (min-width: 375px) {
+    body {
+       width: 100%;
+       justify-items: center;
+    }
+
+    #card-container {
+        width: 45%;
+        padding: 1em;
+    }
+
+    .radio-btn {
+        margin-bottom: 1em;
+    }
+
+    button {
+        padding: 0.6em;
     }
 }
