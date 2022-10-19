@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Page](https://github.com/TheKelvin/Interactive-Rating-Component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Netlify Site](https://fastidious-horse-93cade.netlify.app)
 
 ## My process
 
